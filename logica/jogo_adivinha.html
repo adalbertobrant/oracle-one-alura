@@ -10,13 +10,32 @@
 		pulalinha();
 	}
 
-    var numero_pensado = Math.round(Math.random() * 100);
+	function sorteia(n){
+		return Math.round(Math.random() * n);
+	}
+
+	function entre_numero_sorteio(){
+		var n = parseInt(prompt("Entre um número para ser usado no sorteio."));
+		return n;
+	}
+
+    var numero_pensado = sorteia(entre_numero_sorteio());
 	var chute = parseInt(prompt("Já pensei. Qual você acha que é?"));
 	
 	if(chute == numero_pensado){
 		mostra("Uau! Você acertou, pois eu pensei no " + numero_pensado);
-	}else {
-
-        mostra("Você errou! Eu tinha pensado no " +"<big>"+ numero_pensado+"</big>");
 	}
+	
+	if(chute != numero_pensado){
+		
+		if(chute > numero_pensado){
+			mostra("Humm, você errou, por " + (chute - numero_pensado) +" a menos. Que pena!");
+			mostra("Número que pensei foi -> " + numero_pensado);
+		}
+		if(chute < numero_pensado){
+			mostra("Humm, você errou, por " + (numero_pensado - chute)+ " a mais. Que pena!");
+			mostra("Número que pensei foi -> " + numero_pensado);
+		}
+	}
+	
 </script>
