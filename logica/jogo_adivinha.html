@@ -1,0 +1,22 @@
+<meta charset='UTF-8'>
+<h1>Pense em um número</h1>
+<script>
+	function pulalinha(){
+		document.write("<br>");
+    }
+	
+	function mostra(frase){
+		document.write("<br>"+frase+"<br>");
+		pulalinha();
+	}
+
+    var numero_pensado = Math.round(Math.random() * 100);
+	var chute = parseInt(prompt("Já pensei. Qual você acha que é?"));
+	
+	if(chute == numero_pensado){
+		mostra("Uau! Você acertou, pois eu pensei no " + numero_pensado);
+	}else {
+
+        mostra("Você errou! Eu tinha pensado no " +"<big>"+ numero_pensado+"</big>");
+	}
+</script>
