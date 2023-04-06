@@ -1,0 +1,20 @@
+<meta charset= 'UTF-8'>
+<h1>TABUADA ...</h1>
+<script>
+	function pulalinha(){
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+	function mostra(frase){
+		document.write(frase);
+		pulalinha();
+	}
+
+	var numero_tabuada = parseInt(prompt("Qual número vamos fazer a tabuada ?"));
+	mostra("Tabuada do " + numero_tabuada);
+	for(i = 0 ; i<= 10; i++){
+		mostra(i + " * " + numero_tabuada + " = " + i * numero_tabuada);
+	}
+
+</script>
