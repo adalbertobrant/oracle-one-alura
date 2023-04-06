@@ -1,5 +1,5 @@
 <meta charset='UTF-8'>
-
+<h1> Média de idade dos familiares </h1>
 <script>
 
 	function pulalinha(){
@@ -12,5 +12,17 @@
 		document.write(frase);
 		pulalinha();
 	}
+	
+	var qtd_familiares = parseInt(prompt("Quantos familiares você tem para calcular a média das idades ?"));
+	var idade_familiar = 0;
+	var total_idades = 0;
+	for(var i = 0; i < qtd_familiares; i++){
+		idade_familiar = parseInt(prompt("Entre a idade do "+(i+1)+"° familiar!"));
+		total_idades = total_idades + idade_familiar;
+		mostra("Idade do "+ (i+1) + "° familiar - " + idade_familiar);
+	}
+	var media_idades = total_idades / qtd_familiares;
 
+	mostra("Você tem " + qtd_familiares + " familiares.");
+	mostra("A média de idade deles é de "+ media_idades.toFixed(2));
 </script>
