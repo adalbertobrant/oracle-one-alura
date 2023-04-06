@@ -13,7 +13,8 @@
 	var segredo = segredo();	
 
 	function verifica(){
-		var input = document.querySelector("input");
+		var input = document.querySelector("input")	;
+		input.focus();
 		if (input.value == segredo){
 			alert("Você acertou -> "+input.value);
 		}
