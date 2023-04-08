@@ -1,0 +1,20 @@
+<canvas width = '600' height = '400'></canvas>
+
+<script>
+	function desenha_quadrado_verde(x){
+
+		var tela = document.querySelector('canvas');
+		var pincel = tela.getContext('2d');
+		pincel.fillStyle = 'green';
+		pincel.fillRect(x,0,50,50);
+		pincel.strokeStyle = 'black';
+		pincel.strokeRect(x,0,50,50);
+	}
+
+	desenha_quadrado_verde(50);
+	desenha_quadrado_verde(0);
+	desenha_quadrado_verde(100);
+
+
+
+</script>
