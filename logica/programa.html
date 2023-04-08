@@ -1,33 +1,17 @@
-<meta charset="UTF-8">
+<meta charset='utf-8'>
+<canvas width="600" height="400"></canvas>
 
 <script>
-	
-	function pulaLinha() {
 
-		document.write("<br>");	
-		document.write("<br>");	
+	var tela = document.querySelector('canvas');
+	var pincel = tela.getContext('2d');
+	var cores = ['green','red','blue','gray']
+	pincel.fillStyle = 'lightgray';
+	pincel.fillRect(0,0,600,400);
+	for(var i = 0; i < 4; i++){
+		pincel.fillStyle = cores[i];
+		pincel.fillRect(0+i*10,0+i*10, i*10 +55, i*10 + 45);
 	}
-
-	function mostra(frase) {
-
-		document.write(frase);
-		pulaLinha();
-	}
-
-	var ano = 2016;
-	
-	mostra("Flávio tem " + (ano - 1977) + " anos");
-
-	mostra("Joaquim tem " + (ano - 1996) + " anos");
-
-	ano = 2017;
-	
-	mostra("Barney tem " + (ano - 1976) + " anos");
-
-
-
 </script>
-
-
 
 
