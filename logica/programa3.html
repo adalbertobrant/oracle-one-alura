@@ -3,6 +3,8 @@
 <script>
 	var tela = document.querySelector('canvas');
 	var pincel = tela.getContext('2d');
+	var cores = ['blue','red','green'];
+	var index_cor = 0;
 
 	pincel.fillStyle = 'grey';
 	pincel.fillRect(0,0,600,400);
@@ -10,7 +12,7 @@
 	function desenhaCirculo(evento){
 		var x = evento.pageX - tela.offsetLeft;
 		var y = evento.pageY - tela.offsetTop;
-		pincel.fillStyle = 'blue';
+		pincel.fillStyle = cores[index_cor];
 		pincel.beginPath();
 		pincel.arc(x,y,10,0,2*3.14);
 		pincel.fill();
@@ -19,7 +21,16 @@
 
 	tela.onclick = desenhaCirculo;
 
+	function mudaCor() {
+		index_cor++;
+		if(index_cor >= cores.length){
+			index_cor = 0;
+		}
+		return false;
+		
+    }
 
+    tela.oncontextmenu = mudaCor;
 
 
 
