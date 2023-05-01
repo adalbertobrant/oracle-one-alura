@@ -1,0 +1,63 @@
+# Ver a branch
+git branch
+
+# Vai para outra branch
+git checkout nome_branch
+
+# Atalho para criar branch e já trabalhar nela 
+git checkout -b nome_branch
+
+# Fazer a junção de duas branchs na main
+git merge nome_branch
+
+# Atualizar os head de uma branch para main 
+git rebase nome_branch
+
+# Mostrar um gráfico no log, útil para branches e mostar o rebase e merge
+git log --graph
+
+# Mostra onde foi feita a mudança
+git log -p
+
+# Desfazer alterações no git
+git checkout -- nome_do_arquivo
+
+# Desfazer uma alteração que já foi alteriormente adicionada e está pronta para ser commit
+git reset HEAD nome_do_arquivo
+
+# Desfazer um arquivo que já commitado , faz o git revert pegando o hash daquele commit através do git log
+git revert hash_do_comit
+
+# salvar alterações em local temporário para serem commitadas depois
+git stash 
+
+# lista o que está no git stash
+git stash list
+
+# remover da stash e commit ela
+git stash apply posição da stash na lista
+
+# remove da stash
+git stash drop posicao da lista 
+
+# remover da stash e já aplicar na branch, sempre a última posição do stash
+git stash pop
+
+# ir para um commit específico
+git checkout  hash_do_commit 
+
+# ir para um commit específico e criar nova branch
+git checkout -b nome_branch
+git checkout hash_do_commit
+
+# mostra a diferença entre os códigos
+git diff hash..próxima_hash
+
+# cria tags para versionar o código
+git tag -a nome_da_tag-versa0-01-v.0.1 -m "primeira versão beta da aplicação cursos"
+
+# enviar a tag para o github
+git push origin nome_da_tag-versa0-01-v.0.1
+
+
+
