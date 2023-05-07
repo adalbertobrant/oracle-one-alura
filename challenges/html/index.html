@@ -1,48 +1,38 @@
 <!DOCTYPE html>
-
 <html lang="pt-br">
-
 <head>
-  <meta charset=UTF-8">
-  <meta content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/style.css">
-  <title>Encriptador</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
   <script src="/js/script.js"></script>
-  
-</head>  
-
+  <title>Encriptador</title>
+</head>
 <body>
-  
   <header>
-    <img src="/img/logo-alura-Frame 6.png" alt="logomarca da escola alura de programação">
+    <img class="logo-alura" src="/img/logo-alura-Frame 6.png" alt="logo da alura">
   </header>
-
-  <section class="section-input">
-
-    <input type="text" name="caixa texto" id="caixa-texto" placeholder="Digite seu texto">
-
-    <button>Criptografar</button>
-    
-    <button>Descriptografar</button>
-
-
-  </section>
-
-  <section class="section-rect">
-    <img class="section-rect-img" src="/img/High quality products 1 1.svg" alt="figura geométrica de um diamante, com um menino sentado de joelhos, segurando uma lupa na frente de um de seus olhos que está aberto e o outro fechado,  olhando para a figura geométrica do diamante", inspecionando o mesmo.>
-    <div class="section-rect-texto-inicial">
-      <br><h1>Nenhuma mensagem encontrada</h1>
-      <br><p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+<main>
+  <section>
+    <textarea class="text-area" cols="41" rows="4" placeholder="Digite seu texto"></textarea>
+    <div class="informacoes">
+      <h6>Apenas letras minúsculas e sem acento.</h6>
     </div>
+    <div class="botoes">
+      <button class="btn-encriptar">Criptografar</button>
+      <button class="btn-desencriptar">Descriptografar</button>
 
+    </div>
   </section>
-  
-  <footer>
+  <section>
+    <textarea class="mensagem" cols="20" rows="10"></textarea>
+    <button class="btn-copiar">Copiar</button>
+  </section>
+</main>
 
-  </footer>
   
 </body>
-
-  
-
 </html>
