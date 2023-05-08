@@ -29,7 +29,6 @@ main {
   border: none;
   color: #0A3871;
   margin-top: 90px;
-  text-transform: lowercase;
 }
 
 ::placeholder{ color: #0A3871;}
@@ -38,13 +37,14 @@ main {
   }
 
 .mensagem {
-  background: white;
-  background-image: url(/img/High\ quality\ products\ 1\ 1.svg);
+  background: white; 
+  background-image: url(/img/products.svg);
   background-repeat: no-repeat;
   border: none;
   border-radius: 24px;
   color: #0A3871;
   margin-left: 98px;
+  margin-right: 100px;
   margin-top: 20px;
   padding-left: 20px;
   position: fixed;
