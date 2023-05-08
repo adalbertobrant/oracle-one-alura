@@ -17,19 +17,19 @@
   </header>
 <main>
   <section>
-    <textarea class="text-area" cols="41" rows="4" placeholder="Digite seu texto"></textarea>
+    <textarea class="text-area" id="text" cols="41" rows="4" placeholder="Digite seu texto" autofocus></textarea>
     <div class="informacoes">
       <h6>Apenas letras minúsculas e sem acento.</h6>
     </div>
     <div class="botoes">
-      <button class="btn-encriptar">Criptografar</button>
-      <button class="btn-desencriptar">Descriptografar</button>
+      <button class="btn-encriptar" onclick="captura_texto()">Criptografar</button>
+      <button class="btn-desencriptar" onclick="descriptografa_texto()">Descriptografar</button>
 
     </div>
   </section>
-  <section>
-    <textarea class="mensagem" cols="20" rows="10"></textarea>
-    <button class="btn-copiar">Copiar</button>
+  <section class="sec-mensagem">
+    <textarea class="mensagem" cols="14" rows="10"></textarea>
+    <button class="btn-copiar" onclick="copiar_texto()">Copiar</button>
   </section>
 </main>
 
